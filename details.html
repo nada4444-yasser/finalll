@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+            <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <style>
+            li a {
+            text-decoration: none;
+            color: rgb(18, 17, 17);
+           margin-left: 30px;
+        }
+       
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+         .form-control {
+      background: linear-gradient(45deg, rgb(240, 151, 50), rgb(246, 73, 10));
+      border: none;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      box-shadow: #e26009;
+     
+    }
+    .form-control:hover { transform: scale(1.05); color: #f0f0f0; }
+
+
+         nav :hover{
+          color: rgb(253, 65, 8);
+        }
+
+            .txt h3 {
+      background: url("assets/images/page-heading-bg.jpg");
+      padding: 150px;
+      font-weight: bolder;
+      
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        font-size: xx-large;
+         text-align: center;
+         font-style: unset;
+    }
+    .x{
+      font-weight: 300;
+        background-color: rgb(242, 205, 176);
+        padding: 7px;
+        border-radius: 5px;
+       
+        margin-top: 70px;
+        margin-bottom: 70px;
+        gap: 50px;
+    }
+    strong{
+      font-weight: bold;
+    }
+    .question.active + .answer{
+      display: block;
+    }
+    .answer{
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #fff;
+      border-left: 4px solid #888;
+    }.question{
+      font-weight: bold;
+    margin-top: 5px;
+      cursor: pointer;
+      padding: 15px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      max-width: 800px;
+      margin-bottom: 5px;
+      margin-left: 20px;
+    }
+   .question:hover {
+      color: rgb(238, 103, 14);
+    }
+    .cs{
+      margin-top: 40px;
+    }
+    .info-table{
+      background-color:white;
+      padding: 20px;
+      width: 400px;
+      border-radius: 8px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+    
+
+    margin-top: 30px;
+
+    }
+     
+  .info-table span {
+      font-size: 14px;
+      color: #888;
+    }
+        .info-table ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .info-table li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .info-table h4 {
+      margin: 0;
+      font-size: 16px;
+    }
+    .btn-dark{
+      background-color: #444;
+      color: white;
+    }
+    .btn-orange{
+      background-color: #e26009;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .buttons{
+      margin: 20px 0;
+    }
+    .buttons button{
+      margin-right: 10px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .description{
+      max-width: 500px;
+      margin-left: 100px;
+    
+
+     
+     
+    }
+    .main img{
+      width: 2000px;
+      border-radius: 10px;
+      margin-left: 90px;
+      height: 500px;
+    }
+    .header {
+      text-transform: uppercase;
+      font-size: 14px;
+      color: rgb(10, 10, 9);
+      margin-bottom: 50px;
+      margin-top: 40px;
+    
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .main {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+     width: 1500px;
+     padding: 50px;
+    
+    
+    }
+
+    .info-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 700px;
+      height: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      
+    }
+
+    .info-card p {
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+      gap: 10px;
+    }
+    h6{
+       text-transform: uppercase;
+      font-size: 14px;
+      color: rgb(241, 107, 63);
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .of{
+      background-color: #e0e0e0;
+      padding: 40px;
+   margin-right: 70px;
+    width:1400px;
+    width: 100%;
+   
+    
+    }
+    .main p{
+      margin: 10px 0;
+       display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      margin-top: 30px;
+      width: 250px;
+      font-size: 15px;
+      color: #0c0c0c;
+     
+      
+    }
+    .main span{
+      font-weight: bolder;
+      font-size: x-large;
+    }
+    .main-content{
+      font-size: 14px;
+      color: #3c3c3c;
+      max-width:1000px ;
+      margin-left: 30px;
+    }
+    .m{
+      margin-bottom: 50px;
+      margin-top: 30px;
+      font-weight: bold;
+      color: #0c0c0c;
+    }
+    .container{
+      margin-right: 50px;
+    }
+     
+
+        footer {
+            background-color: #0c0c0c;
+            color: #eae6e6;
+            text-align: center;
+            padding: 40px;
+        }
+       
+    </style>
+</head>
+<body>
+
+
+
+      <nav style="display: flex;justify-content: space-between; padding:10px ;
+ ">
+
+        <h4 style="color: #0c0c0c; display: flex; align-items: center; gap: 8px; font-size: xx-large; font-weight: bold; margin-left: 20px;" >
+
+           
+
+            VILLA
+        </h4>
+
+        <div>
+            <ul class="nav justify-content-end d-flex gap-4 "
+                style="font-size: 17px; padding-top:12px ; font-weight: 500;  ">
+                <li><a href="home.html">
+                        home</a>
+                </li>
+                <li>
+                    <a href="properties.html">properties</a>
+                </li>
+                <li>
+                    <a href="Detail.html">Detail</a>
+                
+                </li>
+                 <li>
+                   <a href="favorites.html">favorite</a>
+                </li>
+                <li>
+                    <a href="contact.html">contact</a>
+                </li>
+               
+ <form class="d-flex my-2 my-lg-0">
+        <a href="login.html">  <button class="form-control" type="button">
+            <i class="bi bi-person-circle"></i> Login
+          </button></a>
+            </ul>
+        </div>
+    </nav>
+     <div class="txt">
+    
+<h3>Single Property</h3>
+ 
+   <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .main-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .info {
+      margin-top: 20px;
+    }
+    .info h4 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      color: #333;
+    }
+    .info span {
+      display: inline-block;
+      margin-bottom: 15px;
+      color: #888;
+    }
+    .info p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+    .details {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      gap: 20px;
+    }
+    .details .box {
+      flex: 1 1 calc(50% - 20px);
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .details .box p {
+      margin: 0 0 10px;
+      color: #444;
+    }
+    .details .box span {
+      color: #000;
+      font-weight: bold;
+    }
+  </style>
+
+
+  <div class="container">
+    <div class="main-image mb-4">
+      <img id="mainImage" src="assets/images/single-property.jpg" alt="">
+    </div>
+
+    <div class="info">
+      <h4 id="propertyTitle">24 New Street Miami, OR 24560</h4>
+      <span id="propertyCategory">Apartment</span>
+      <p id="propertyDescription">وصف العقار يظهر هنا</p>
+    </div>
+
+    <div class="details">
+      <div class="box">
+        <p>Total Space: <span id="area">540 m</span></p>
+        <p>Floor Number: <span id="floor">3</span></p>
+        <p>Rooms: <span id="rooms">8</span></p>
+      </div>
+      <div class="box">
+        <p>Parking: <span id="parking">Yes</span></p>
+        <p>Payment: <span id="payment">Bank</span></p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+           
+          <div class="cs">
+            <div class="question">Best Useful Links ?</div>
+            <div class="answer">
+            Dolor<strong> almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor kinfolk tonx seitan crucifix 3 wolf moon bicycle rights keffiyeh snackwave wolf same vice, chillwave vexillologist incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            <div class="question">How does this work ?</div>
+<div class="answer">
+Dolor/<strong> almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor kinfolk tonx seitan crucifix 3 wolf moon bicycle rights keffiyeh snackwave wolf same vice, chillwave vexillologist incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+                    <div class="question">Why is villa the best ?</div>
+<div class="answer">
+Dolor/<strong> almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor kinfolk tonx seitan crucifix 3 wolf moon bicycle rights keffiyeh snackwave wolf same vice, chillwave vexillologist incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+          </div>
+
+                    <div class="col-lg-4 mb-4">
+          <div class="info-table mt-3">
+            <ul>
+              <li>
+                <img src="assets/images/info-icon-01.png" alt="" style="max-width: 52px;">
+                <h4>450 m2<br><span>Total Flat Space</span></h4>
+              </li>
+              <li>
+                <img src="assets/images/info-icon-02.png" alt="" style="max-width: 52px;">
+                <h4>Contract<br><span>Contract Ready</span></h4>
+              </li>
+              <li>
+                <img src="assets/images/info-icon-03.png" alt="" style="max-width: 52px;">
+                <h4>Payment<br><span>Payment Process</span></h4>
+              </li>
+              <li>
+                <img src="assets/images/info-icon-04.png" alt="" style="max-width: 52px;">
+                <h4>Safety<br><span>24/7 Under Control</span></h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+    </div>
+       </div>
+    
+      <div class="of">
+ <div class="header">
+   <h6 >| Best Deal</h6>
+            <h2>Find Your Best Deal Right Now!</h2>
+ 
+ </div>
+ <div class="buttons">
+  <button class="btn-orange">Apartment</button>
+   <button class="btn-dark">Villa House</button>
+ <button class="btn-dark">Penthouse</button>
+ </div>
+           
+ <div class="main">
+  <div class="info-card">
+    <p>Total Space <span>540 m</span></p>
+    <p>Floor Number <span>3</span></p> 
+    <p>Rooms <span>8</span></p>
+    <p>Parking <span>Yes</span></p>
+    <p>Payment <span>Bank</span></p>
+  </div>
+    <img src="assets/images/deal-01.jpg" alt="">
+    <div class="description">
+      <h3>All Info About Apartment</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo fugit cupiditate ratione aperiam pariatur voluptates, accusamus dicta maiores dolores consequatur quisquam sequi, officiis dolorum, quod temporibus at ullam consequuntur eaque!</p>
+      <p>Swag fanny pack Iyft blog twee. JOMO ethical copper mug, succulents typewriter.</p>
+      <button class="btn-orange">Schedule avisit</button>
+    </div>
+ </div>
+</div>
+
+  <footer class="footer-no-gap">
+    <div class="containerr">
+      <div class="col-lg-12">
+        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. 
+        
+        Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+      </div>
+    </div>
+    
+   </footer>
+         <script>
+            const questions=document.querySelectorAll('.question');
+            questions.forEach(q =>{
+              q.addEventListener('click', () =>{
+                q.classList.toggle('active');
+                const answer=q.nextSibling; 
+                answer.style.display=answer.style.display === 'block' ? 'none' :'block';
+              });
+            });
+          
+ 
+    document.addEventListener("DOMContentLoaded", () => {
+      const selectedProperty = JSON.parse(localStorage.getItem("selectedProperty"));
+
+      if (selectedProperty) {
+  
+        document.getElementById("mainImage").src = selectedProperty.images && selectedProperty.images.length > 0
+          ? selectedProperty.images[0]
+          : "https://via.placeholder.com/600x400?text=No+Image";
+
+      
+        document.getElementById("propertyTitle").textContent = selectedProperty.title || "No Title";
+        document.getElementById("propertyCategory").textContent = selectedProperty.category || "Category";
+        document.getElementById("propertyDescription").textContent = selectedProperty.description || "No description provided.";
+        
+        document.getElementById("area").textContent = selectedProperty.area || "-";
+        document.getElementById("floor").textContent = selectedProperty.floor || "-";
+        document.getElementById("rooms").textContent = selectedProperty.bedrooms || "-";
+        document.getElementById("parking").textContent = selectedProperty.parking ? "Yes" : "No";
+        document.getElementById("payment").textContent = selectedProperty.payment || "Not set";
+      } else {
+        document.querySelector(".container").innerHTML = "<p style='padding: 20px; color: red;'>No property data found. Please go back to the properties page.</p>";
+      }
+    });
+  </script>
+          
+</body>
+</html> 

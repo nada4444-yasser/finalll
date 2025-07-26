@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real Estate Properties</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <style>
+  
+      li a {
+            text-decoration: none;
+            color: rgb(7, 7, 7);
+           margin-left: 30px;
+        }
+ .form-control {
+      background: linear-gradient(45deg, rgb(232, 140, 35), rgb(227, 66, 7));
+      border: none;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+     
+    }
+    .form-control:hover { transform: scale(1.05); color: #f0f0f0; }
+
+
+    .property {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+    }
+
+    .property:hover {
+      transform: scale(1.03);
+    }
+
+    .property img {
+      max-height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .property h4 {
+      color: #0d6efd;
+    }
+     nav :hover{
+          color: rgb(253, 65, 8);
+        }
+ 
+
+
+
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f8f8;
+      padding: 0;
+      margin: 0;
+      max-height: 1000px;
+    }
+
+  
+    .txt h3 {
+      background: url("assets/images/page-heading-bg.jpg");
+      padding: 150px;
+      font-weight: bolder;
+      
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        font-size: 42px;
+         text-align: center;
+         font-style: unset;
+    }
+    /* .col-lg-12{
+      background-color: #f8f8f8;
+    } */
+  .properties-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 50px;
+    width: 1500px;
+  }
+
+  .properties-items {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .properties-items:hover {
+    transform: translateY(-5px);
+  }
+
+  .item {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+      height: 100%;
+  
+  }
+  
+  .item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+
+  .item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+   
+  }
+
+  .item h6 {
+    color: #f35525;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .item h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+  }
+
+  .item ul li {
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main-button a {
+    background-color: #f35525;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 100px;
+  }
+
+  .main-button a:hover {
+    background-color: #000;
+  }
+
+  .pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 40px;
+  }
+
+  .pagination li a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .pagination li a.is_active,
+  .pagination li a:hover {
+    background-color: #f35525;
+    color: #fff;
+  }
+
+  .properties-filter {
+    display: flex;
+    gap: 18px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .properties-filter li a {
+    padding: 20px 30px;
+    background-color: #080808;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #faf6f6;
+    font-weight: bold;
+  }
+
+  .properties-filter li a.is_active,
+  .properties-filter li a:hover {
+    background-color: #f35525;
+    color: white;
+  }
+  .row properties-box{
+  
+    flex-wrap: wrap;
+    justify-content: center;
+    display: grid;
+    margin: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  a{
+    text-decoration: none; 
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li span{
+    font-weight: bold;
+  }
+ 
+    footer {
+            background-color: #0c0c0c;
+            color: #eae6e6;
+            text-align: center;
+            padding: 80px 0;
+            margin-top: 50px;
+          width: 100%;
+
+        }
+
+
+        .property-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-info {
+  padding: 15px;
+}
+
+.property-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.property-price {
+  font-size: 16px;
+  color: #00aaff;
+  margin-bottom: 10px;
+}
+
+.favorite-btn {
+  background-color: #faf6f6;
+  color: #070505;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+ 
+}
+
+.favorite-btn:hover {
+  background-color: #e84118;
+}
+
+.footer-no-gap {
+  border-top: 1px solid #ccc;
+  color: #555;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+  .property-card {
+    width: 100%;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+    <nav style="display: flex;justify-content: space-between; padding:10px ;
+ ">
+
+        <h4 style="color: #0c0c0c; display: flex; align-items: center; gap: 8px; font-size: xx-large; font-weight: bold; margin-left: 20px;" >
+
+           
+
+            VILLA
+        </h4>
+
+        <div>
+            <ul class="nav justify-content-end d-flex gap-4 "
+                style="font-size: 17px; padding-top:12px ; font-weight: 500;  ">
+                <li><a href="home.html">
+                        home</a>
+                </li>
+                <li>
+                    <a href="properties.html">properties</a>
+                </li>
+                <li>
+                    <a href="Detail.html">Detail</a>
+               
+                </li>
+                 <li>
+                   <a href="favorites.html">favorite</a>
+                </li>
+                <li>
+                    <a href="contact.html">contact</a>
+                </li>
+               
+              
+ <form class="d-flex my-2 my-lg-0">
+        <a href="login.html">  <button class="form-control" type="button">
+            <i class="bi bi-person-circle"></i> Login
+          </button></a>
+            </ul>
+        </div>
+    </nav>
+   
+    <div class="txt">
+    
+<h3>Properties</h3>
+ 
+    </div> 
+   
+    
+<!-- قسم العقارات -->
+ <div class="section properties">
+  <div class="container">
+
+    <!-- فلاتر العقارات -->
+    <ul class="properties-filter">
+      <li><a class="is_active" href="#!" data-filter="*">Show All</a></li>
+      <li><a href="#!" data-filter=".adv">Apartment</a></li>
+      <li><a href="#!" data-filter=".str">Villa House</a></li>
+      <li><a href="#!" data-filter=".rac">Penthouse</a></li>
+    </ul>
+
+   
+    <div class="row properties-box">
+
+      
+<div id="properties-container" style="display: flex; flex-wrap: wrap; gap: 20px;"></div>
+ 
+ 
+  <footer>
+   <div class="containerr">
+      <!-- <div class="col-lg-12"> -->
+        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. 
+        
+        Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+      </div>
+    </div>
+
+  </footer>
+    
+
+ 
+
+ 
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    fetch('https://edu-me01.github.io/Json-Data/properties.json')
+      .then(response => response.json())
+      .then(data => {
+        const properties = data.properties;
+        const container = document.getElementById('properties-container');
+        const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+        properties.forEach(property => {
+          const imageSrc = property.images && property.images.length > 0
+            ? property.images[0]
+            : 'https://via.placeholder.com/400x200?text=No+Image';
+
+          const isFavorited = favorites.some(fav => fav.id === property.id);
+
+          const card = document.createElement('div');
+          card.className = 'property-card';
+          card.style.cssText = `
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          `;
+
+          card.innerHTML = `
+            <img src="${imageSrc}" alt="${property.title}" style="width: 100%; height: 200px; object-fit: cover;">
+            <div style="padding: 10px;">
+              <h3 style="margin: 0 0 10px;">${property.title}</h3>
+              <p style="margin: 0 0 10px; font-weight: bold; color: #28a745;">${property.price} EGP</p>
+              <div style="display: flex; justify-content: space-between; gap: 10px;">
+                <button class="favorite-btn" style="background: transparent; border: 1px solid; cursor: pointer; flex: 1;">
+                  <i class="${isFavorited ? 'fa-solid' : 'fa-regular'} fa-heart" style="font-size: 14px; color: red;"> </i>
+                </button>
+                <button class="view-btn" style="background-color: #e84118; color: white; border: none; padding: 8px; border-radius: 8px; cursor: pointer; flex: 1;">
+                  View
+                </button>
+              </div>
+            </div>
+          `;
+
+          const favBtn = card.querySelector('.favorite-btn');
+          const heartIcon = favBtn.querySelector('i');
+
+          favBtn.addEventListener('click', () => {
+            toggleFavorite(property, heartIcon);
+          });
+
+          const viewBtn = card.querySelector('.view-btn');
+          viewBtn.addEventListener('click', () => {
+            localStorage.setItem('selectedProperty', JSON.stringify(property));
+            window.location.href = 'detail.html';
+          });
+
+          container.appendChild(card);
+        });
+      })
+      .catch(error => console.error('Error loading JSON:', error));
+  });
+
+  function toggleFavorite(property, icon) {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const index = favorites.findIndex(fav => fav.id === property.id);
+
+    if (index !== -1) {
+      // remove from favorites
+      favorites.splice(index, 1);
+      icon.classList.remove('fa-solid');
+      icon.classList.add('fa-regular');
+    
+      Swal.fire({
+      icon: 'info',
+      title: 'تمت الإزالة',
+      text: 'تمت إزالة العقار من المفضلة.',
+      confirmButtonText: 'حسنًا'
+    });
+  } else {
+    // add to favorites
+    favorites.push(property);
+    icon.classList.remove('fa-regular');
+    icon.classList.add('fa-solid');
+
+    // SweetAlert عند الإضافة
+    Swal.fire({
+      icon: 'success',
+      title: 'تمت الإضافة!',
+      text: 'تمت إضافة العقار إلى المفضلة بنجاح.',
+      confirmButtonText: 'رائع!'
+    });
+  }
+
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }
+
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
